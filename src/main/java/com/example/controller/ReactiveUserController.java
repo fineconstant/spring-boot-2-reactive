@@ -32,7 +32,7 @@ public class ReactiveUserController {
     }
 
     @GetMapping("by_name/{name}")
-    public Flux<User> userByName(@PathVariable Mono<String> name) {
+    public Flux<User> userByName(String name) {
         return userRepository.findByName(name);
     }
 }
