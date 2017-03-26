@@ -1,7 +1,7 @@
-package com.example.service;
+package isp.example.service;
 
-import com.example.service.model.User;
-import com.example.service.repository.UserRepository;
+import isp.example.service.model.User;
+import isp.example.service.repository.ReactiveUserRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -12,20 +12,15 @@ import java.util.Arrays;
 @SpringBootApplication
 public class ReactiveServiceApplication {
 
-    private final UserRepository userRepository;
-
-    public ReactiveServiceApplication(UserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
-
     @Bean
-    CommandLineRunner cmd() {
+    CommandLineRunner cmd(ReactiveUserRepository userRepository) {
         return args -> {
             userRepository.save(Arrays.asList(new User("John"),
                                               new User("Adam"),
                                               new User("Adam"),
                                               new User("Robert")))
                           .subscribe(System.out::println);
+
             userRepository.findAll()
                           .subscribe(System.out::println);
 

@@ -1,6 +1,6 @@
-package com.example.service;
+package isp.example.service;
 
-import com.example.service.model.Event;
+import isp.example.service.model.Event;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

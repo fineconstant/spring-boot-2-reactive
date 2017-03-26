@@ -1,6 +1,6 @@
-package com.example.service.controller;
+package isp.example.service.controller;
 
-import com.example.service.ReactiveServiceApplication;
+import isp.example.service.ReactiveServiceApplication;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,7 +1,7 @@
-package com.example.service.controller;
+package isp.example.service.controller;
 
-import com.example.service.repository.UserRepository;
-import com.example.service.model.User;
+import isp.example.service.repository.ReactiveUserRepository;
+import isp.example.service.model.User;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,9 +11,9 @@ import reactor.core.publisher.Mono;
 @RestController
 public class ReactiveUserController {
 
-    private final UserRepository userRepository;
+    private final ReactiveUserRepository userRepository;
 
-    public ReactiveUserController(UserRepository userRepository) {
+    public ReactiveUserController(ReactiveUserRepository userRepository) {
         this.userRepository = userRepository;
     }
 

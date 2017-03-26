@@ -1,4 +1,4 @@
-package com.example.service.model;
+package isp.example.service.model;
 
 import lombok.ToString;
 
