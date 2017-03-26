@@ -1,7 +1,7 @@
-package com.example.controller;
+package com.example.service.controller;
 
-import com.example.repository.UserRepository;
-import com.example.model.User;
+import com.example.service.repository.UserRepository;
+import com.example.service.model.User;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;

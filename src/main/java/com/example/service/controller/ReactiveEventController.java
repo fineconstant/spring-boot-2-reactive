@@ -1,6 +1,6 @@
-package com.example.controller;
+package com.example.service.controller;
 
-import com.example.model.Event;
+import com.example.service.model.Event;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

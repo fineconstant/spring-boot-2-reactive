@@ -1,7 +1,7 @@
-package com.example;
+package com.example.service;
 
-import com.example.model.User;
-import com.example.repository.UserRepository;
+import com.example.service.model.User;
+import com.example.service.repository.UserRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -10,11 +10,11 @@ import org.springframework.context.annotation.Bean;
 import java.util.Arrays;
 
 @SpringBootApplication
-public class SpringBoot2Application {
+public class ReactiveServiceApplication {
 
     private final UserRepository userRepository;
 
-    public SpringBoot2Application(UserRepository userRepository) {
+    public ReactiveServiceApplication(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
@@ -39,6 +39,6 @@ public class SpringBoot2Application {
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringBoot2Application.class, args);
+        SpringApplication.run(ReactiveServiceApplication.class, args);
     }
 }

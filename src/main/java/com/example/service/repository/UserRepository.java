@@ -1,9 +1,10 @@
-package com.example.repository;
+package com.example.service.repository;
 
-import com.example.model.User;
+import com.example.service.model.User;
 import org.springframework.data.repository.reactive.ReactiveCrudRepository;
 import reactor.core.publisher.Flux;
 
+// TODO: fix org.springframework.data.mapping.PropertyReferenceException: No property delete found for type User!
 public interface UserRepository extends ReactiveCrudRepository<User, Long> {
     Flux<User> findByName(String name);
 }
