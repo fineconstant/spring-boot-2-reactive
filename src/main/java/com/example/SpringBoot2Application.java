@@ -1,5 +1,7 @@
 package com.example;
 
+import com.example.model.User;
+import com.example.repository.UserRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -21,9 +23,12 @@ public class SpringBoot2Application {
         return args -> {
             userRepository.save(Arrays.asList(new User("John"),
                                               new User("Adam"),
-                                              new User("Robert")));
+                                              new User("Adam"),
+                                              new User("Robert")))
+                          .subscribe(System.out::println);
             userRepository.findAll()
-                          .forEach(System.out::println);
+                          .subscribe(System.out::println);
+
         };
 
 //        return args -> Mono.delayMillis(3000)
