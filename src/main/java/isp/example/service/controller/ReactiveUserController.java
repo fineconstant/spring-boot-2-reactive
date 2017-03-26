@@ -19,14 +19,12 @@ public class ReactiveUserController {
 
     @GetMapping("users")
     public Flux<User> users() {
-        // can return both Reactor's Flux and RxJava's Flowable
         // Publisher 0, 1, N
         return userRepository.findAll();
     }
 
     @GetMapping("users/{id}")
     public Mono<User> userById(@PathVariable Mono<Long> id) {
-        // can return both Reactor's Flux and RxJava's Flowable
         // Mono 0, 1
         return userRepository.findOne(id);
     }
