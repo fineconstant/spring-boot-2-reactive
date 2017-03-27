@@ -26,7 +26,6 @@ public class UserHandler {
 
     public Mono<ServerResponse> userById(ServerRequest request) {
         Mono user = Mono.justOrEmpty(request.pathVariable("id"))
-                        .map(Long::valueOf)
                         .map(userRepository::findOne);
 
 //            TODO: check if valid

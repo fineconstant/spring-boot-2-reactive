@@ -19,18 +19,18 @@ public class ReactiveUserController {
 
     @GetMapping("users")
     public Flux<User> users() {
-        // Publisher 0, 1, N
+        // Flux 0, 1, N
         return userRepository.findAll();
     }
 
     @GetMapping("users/{id}")
-    public Mono<User> userById(@PathVariable Mono<Long> id) {
+    public Mono<User> userById(@PathVariable String id) {
         // Mono 0, 1
         return userRepository.findOne(id);
     }
 
-    @GetMapping("by_name/{name}")
-    public Flux<User> userByName(String name) {
+    @GetMapping("users/by_name/{name}")
+    public Flux<User> userByName(@PathVariable String name) {
         return userRepository.findByName(name);
     }
 }

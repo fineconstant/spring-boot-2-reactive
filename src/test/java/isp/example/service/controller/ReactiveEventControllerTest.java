@@ -1,6 +1,7 @@
 package isp.example.service.controller;
 
 import isp.example.service.ReactiveServiceApplication;
+import isp.example.service.model.Event;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -10,6 +11,7 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.reactive.server.WebTestClient;
 
+
 @SpringBootTest
 @RunWith(SpringRunner.class)
 public class ReactiveEventControllerTest {
@@ -18,10 +20,9 @@ public class ReactiveEventControllerTest {
 
     @Before
     public void setUp() throws Exception {
-        this.webTestClient = WebTestClient.bindToApplicationContext(SpringApplication.run(ReactiveServiceApplication.class))
-                                          .build();
-//        this.webTestClient = WebTestClient.bindToServer().baseUrl("http://localhost:8080")
-//                                          .build();
+        this.webTestClient = WebTestClient
+                .bindToApplicationContext(SpringApplication.run(ReactiveServiceApplication.class))
+                .build();
     }
 
     @Test
@@ -30,7 +31,9 @@ public class ReactiveEventControllerTest {
                           .uri("events/10")
                           .accept(MediaType.APPLICATION_JSON_UTF8)
                           .exchange()
-                          .expectStatus().isOk();
+                          .expectStatus().isOk()
+                          .expectHeader().contentType(MediaType.APPLICATION_JSON_UTF8)
+                          .expectBody(Event.class).returnResult();
     }
 
 }

@@ -1,4 +1,4 @@
-package isp.example.service.model;
+package isp.example.client;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

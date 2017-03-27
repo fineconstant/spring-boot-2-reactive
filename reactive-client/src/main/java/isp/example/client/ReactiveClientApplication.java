@@ -1,6 +1,5 @@
-package isp.example.service;
+package isp.example.client;
 
-import isp.example.service.model.Event;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -22,7 +21,8 @@ public class ReactiveClientApplication {
                                 .accept(MediaType.TEXT_EVENT_STREAM)
                                 .exchange()
                                 .flatMap(clientResponse -> clientResponse.bodyToFlux(Event.class))
-                                .subscribe(System.out::println);
+                                .doOnNext(System.out::println)
+                                .blockLast();
     }
 
     public static void main(String[] args) {

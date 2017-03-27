@@ -2,28 +2,49 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <parent>
-        <artifactId>spring-boot-2-reactive</artifactId>
-        <groupId>com.example</groupId>
-        <version>${spring-boot-2-reactive.version}</version>
-    </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <groupId>isp.example.client</groupId>
+    <artifactId>reactive-client</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <packaging>pom</packaging>
+
+    <name>reactive-client</name>
+    <description>Demo project for Spring Boot 2 Reactive Client</description>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.0.BUILD-SNAPSHOT</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-
-        <spring-boot-2-reactive.version>0.0.1-SNAPSHOT</spring-boot-2-reactive.version>
         <java.version>1.8</java.version>
+        <jackson-datatype-jsr310.version>2.8.7</jackson-datatype-jsr310.version>
     </properties>
-
-    <artifactId>reactive-client</artifactId>
 
     <dependencies>
         <dependency>
-            <groupId>com.example</groupId>
-            <artifactId>spring-boot-2-reactive</artifactId>
-            <version>${spring-boot-2-reactive.version}</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jsr310</artifactId>
+            <version>${jackson-datatype-jsr310.version}</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
         </dependency>
     </dependencies>
 
