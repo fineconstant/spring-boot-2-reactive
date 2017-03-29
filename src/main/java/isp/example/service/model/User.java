@@ -8,8 +8,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
 @ToString
-@Document
 @NoArgsConstructor
+@Document
 public class User {
 
     @Id

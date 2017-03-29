@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
+import reactor.core.scheduler.Schedulers;
 
 @RestController
 public class ReactiveUserController {
@@ -27,6 +28,11 @@ public class ReactiveUserController {
     public Mono<User> userById(@PathVariable String id) {
         // Mono 0, 1
         return userRepository.findOne(id);
+    }
+
+    @GetMapping("users/count")
+    public Mono<Long> usersCount() {
+        return userRepository.count();
     }
 
     @GetMapping("users/by_name/{name}")

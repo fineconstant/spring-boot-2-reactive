@@ -10,7 +10,6 @@ import reactor.core.publisher.Mono;
 import reactor.util.function.Tuple2;
 
 import java.time.Duration;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.stream.Stream;
 
@@ -24,10 +23,13 @@ public class ReactiveEventController {
 
     @GetMapping(value = "events", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
     public Flux<Event> events() {
-        Flux<Event> eventFlux = Flux.fromStream(Stream.generate(() -> new Event(System.currentTimeMillis(), LocalDateTime.now())));
+        Flux<Event> eventFlux = Flux
+                .fromStream(Stream.generate(() -> new Event(System.currentTimeMillis(), LocalDateTime.now())));
         Flux<Long> durationFlux = Flux.interval(Duration.ofSeconds(1));
 
         return eventFlux.zipWith(durationFlux)
-                        .map(Tuple2::getT1);
+                        .map(Tuple2::getT1)
+                        .log()
+                        .doOnCancel(() -> System.out.println("Events stream cancelled"));
     }
 }

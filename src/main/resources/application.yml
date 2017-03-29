@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: spring-boot-2-reactive-service
+logging:
+  level:
+    root: info
