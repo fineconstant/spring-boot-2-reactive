@@ -4,3 +4,6 @@
 * Spring Boot 2
 * Spring 5
 * Reactor
+
+
+#### Operators examples in tests
