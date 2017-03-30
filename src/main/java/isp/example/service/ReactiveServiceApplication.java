@@ -24,7 +24,7 @@ public class ReactiveServiceApplication {
                               .subscribe();
     }
 
-    public static void main(String[] args) {
+     public static void main(String[] args) {
         SpringApplication.run(ReactiveServiceApplication.class, args);
     }
 }
