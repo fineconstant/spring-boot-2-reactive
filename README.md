@@ -1,9 +1,17 @@
-## spring-boot-2-reactive
+## Reactive programming demo
 
-### Demo for:
-* Spring Boot 2
-* Spring 5
-* Reactor
+* #### How to run
+    Execute in this order:
+    1. Run `isp.example.service.ReactiveServiceApplication`
+    2. Run `isp.example.client.ReactiveClientApplication`
 
 
-#### Operators examples in tests
+* #### Used in this project:
+    * Spring Boot 2
+    * Spring 5
+    * Reactor
+
+* #### Some operators examples in `src/test/java`
+
+* #### Also recommended
+    https://github.com/reactor/lite-rx-api-hands-on
