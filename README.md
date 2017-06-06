@@ -42,3 +42,4 @@
 
 * #### To do:
     * Consuming events with TypeScript and RxJs
+    * Format output date format
