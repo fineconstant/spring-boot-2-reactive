@@ -39,3 +39,6 @@
 
 * #### Also worth checking:
     * https://github.com/reactor/lite-rx-api-hands-on
+
+* #### To do:
+    * Consuming events with TypeScript and RxJs
