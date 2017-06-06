@@ -1,13 +1,12 @@
 package isp.example.service.controller;
 
-import isp.example.service.repository.ReactiveUserRepository;
 import isp.example.service.model.User;
+import isp.example.service.repository.ReactiveUserRepository;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-import reactor.core.scheduler.Schedulers;
 
 @RestController
 public class ReactiveUserController {
@@ -27,7 +26,7 @@ public class ReactiveUserController {
     @GetMapping("users/{id}")
     public Mono<User> userById(@PathVariable String id) {
         // Mono 0, 1
-        return userRepository.findOne(id);
+        return userRepository.findById(id);
     }
 
     @GetMapping("users/count")

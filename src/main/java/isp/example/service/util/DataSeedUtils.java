@@ -23,7 +23,7 @@ public class DataSeedUtils {
                                        .publishOn(Schedulers.elastic())
                                        .parallel()
                                        .map(n -> new User("User #" + n));
-        userRepository.save(users)
+        userRepository.saveAll(users)
                       .subscribe();
     }
 }

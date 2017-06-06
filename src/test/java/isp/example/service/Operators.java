@@ -31,9 +31,9 @@ public class Operators {
     @Test
     public void firstEmitting() {
         Mono<String> a = Mono.just("too late")
-                             .delaySubscriptionMillis(500);
+                             .delaySubscription(Duration.ofMillis(500));
         Flux<String> b = Flux.just("faster", "stream", "elements")
-                             .delaySubscriptionMillis(250);
+                             .delaySubscription(Duration.ofMillis(250));
 
         Flux.firstEmitting(a, b)
             .toIterable()

@@ -14,7 +14,7 @@ public class ReactiveServiceApplication {
     @Bean
     CommandLineRunner cmd(ReactiveUserRepository userRepository) {
         return args ->
-                userRepository.save(Flux.just(
+                userRepository.saveAll(Flux.just(
                         new User("John"),
                         new User("Adam"),
                         new User("Adam"),
@@ -24,7 +24,7 @@ public class ReactiveServiceApplication {
                               .subscribe();
     }
 
-     public static void main(String[] args) {
+    public static void main(String[] args) {
         SpringApplication.run(ReactiveServiceApplication.class, args);
     }
 }
