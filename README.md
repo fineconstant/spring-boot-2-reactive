@@ -6,7 +6,10 @@
     Execute in this order:
     1. Run `isp.example.service.ReactiveServiceApplication` - A Service application 
     2. Run `isp.example.client.ReactiveClientApplication` - A Spring backend client application
-    3. Run Angular web application (TODO)
+    3. In order to start reactive front-end Angular 2 application (requires node and npm):
+        * Run `cd reactive-fron`
+        * Run `npm install`
+        * Run `npm start`
     4. **Observe logs of all applications!**
 
 * #### What is inside?
@@ -20,7 +23,7 @@
     * ReactiveClientApplication is a command line Spring application that uses Spring's new 
     (_reactive web client_)[http://docs.spring.io/spring-framework/docs/5.0.0.BUILD-SNAPSHOT/spring-framework-reference/html/web-reactive.html]
     to read events from the Service's `/events` endpoint.
-    * Angular web application (TODO)
+    * Reactive Angular 2 client under `localhost:3000`
 
 * #### Used in this project:
     * [Spring Boot 2](http://docs.spring.io/spring-boot/docs/2.0.0.M1/reference/htmlsingle/)
