@@ -2,6 +2,7 @@ package isp.example.service.controller;
 
 import isp.example.service.model.User;
 import isp.example.service.repository.ReactiveUserRepository;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,6 +10,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RestController
+@CrossOrigin
 public class ReactiveUserController {
 
     private final ReactiveUserRepository userRepository;
