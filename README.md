@@ -24,6 +24,9 @@
     [_reactive web client_](http://docs.spring.io/spring-framework/docs/5.0.0.BUILD-SNAPSHOT/spring-framework-reference/html/web-reactive.html)
     to read events from the Service's `/events` endpoint.
     * Reactive Angular client under `localhost:3000`
+        * As of today, RsJs has some problems with SSE (Server Side Events). See: https://github.com/ReactiveX/rxjs/issues/1644
+        * TypeScript has no EventSource definition. See: https://github.com/Microsoft/TypeScript/issues/13666
+        * **Temporary workaround**: using pure JavaScript EventSource implementation.
 
 * #### Used in this project:
     * [Spring Boot 2](http://docs.spring.io/spring-boot/docs/2.0.0.M1/reference/htmlsingle/)
