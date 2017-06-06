@@ -20,7 +20,7 @@ public class ReactiveClientApplication {
                                 .uri("events")
                                 .accept(MediaType.TEXT_EVENT_STREAM)
                                 .exchange()
-                                .flatMap(clientResponse -> clientResponse.bodyToFlux(Event.class))
+                                .flatMapMany(clientResponse -> clientResponse.bodyToFlux(Event.class))
                                 .doOnNext(System.out::println)
                                 .blockLast();
     }
