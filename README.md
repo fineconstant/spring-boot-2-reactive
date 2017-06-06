@@ -2,8 +2,8 @@
 
 * #### How to run
     Execute in this order:
-    1. Run `isp.example.service.ReactiveServiceApplication`
-    2. Run `isp.example.client.ReactiveClientApplication`
+    1. Run `isp.example.service.ReactiveServiceApplication` - A Service application 
+    2. Run `isp.example.client.ReactiveClientApplication` - A Spring backend client application
 
 
 * #### Used in this project:
@@ -11,7 +11,7 @@
     * Spring 5
     * Reactor
 
-* #### Some operators examples in `src/test/java`
+* #### More examples of operators in `src/test/java`
 
-* #### Also recommended
-    https://github.com/reactor/lite-rx-api-hands-on
+* #### Also recommended to check:
+    * https://github.com/reactor/lite-rx-api-hands-on
