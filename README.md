@@ -4,6 +4,7 @@
     Execute in this order:
     1. Run `isp.example.service.ReactiveServiceApplication` - A Service application 
     2. Run `isp.example.client.ReactiveClientApplication` - A Spring backend client application
+    3. Observe log of both applications
 
 
 * #### Used in this project:
