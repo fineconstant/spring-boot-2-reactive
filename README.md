@@ -1,6 +1,8 @@
 ## Reactive programming demo
 
 * #### How to run?
+    For the best experience import with IntelliJ.
+    
     Execute in this order:
     1. Run `isp.example.service.ReactiveServiceApplication` - A Service application 
     2. Run `isp.example.client.ReactiveClientApplication` - A Spring backend client application
@@ -8,7 +10,7 @@
     4. **Observe logs of all applications!**
 
 * #### What is inside?
-    * ReactiveServiceApplication contains `localhost:8081` reactive endpoints:
+    * ReactiveServiceApplication contains `localhost:8080` reactive endpoints:
         * `/event` - an infinite stream of events
         * `/event{id}` - get a specific event by id
         * `/users` - get a collection of all users
