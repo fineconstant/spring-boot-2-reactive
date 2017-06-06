@@ -21,7 +21,7 @@
         * `/users/count` - get count of all users
         * `/users/by_name/{name}` - get a collection of users with a specified name
     * ReactiveClientApplication is a command line Spring application that uses Spring's new 
-    (_reactive web client_)[http://docs.spring.io/spring-framework/docs/5.0.0.BUILD-SNAPSHOT/spring-framework-reference/html/web-reactive.html]
+    [_reactive web client_](http://docs.spring.io/spring-framework/docs/5.0.0.BUILD-SNAPSHOT/spring-framework-reference/html/web-reactive.html)
     to read events from the Service's `/events` endpoint.
     * Reactive Angular client under `localhost:3000`
 
