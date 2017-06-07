@@ -32,7 +32,7 @@
     * [Spring Boot 2](http://docs.spring.io/spring-boot/docs/2.0.0.M1/reference/htmlsingle/)
     * [Spring 5](https://spring.io/blog/2016/09/22/new-in-spring-5-functional-web-framework)
     * [Project Reactor](https://projectreactor.io/)
-    * [Angular 2](https://angular.io/docs/ts/latest/quickstart.html)
+    * [Angular](https://angular.io/docs/ts/latest/quickstart.html)
     * [RxJs](https://github.com/Reactive-Extensions/RxJS)
 
 * #### More examples of operators in `src/test/java`
@@ -42,4 +42,4 @@
 
 * #### To do:
     * Consuming events with TypeScript and RxJs
-    * Format output date format
+    * Format output date
