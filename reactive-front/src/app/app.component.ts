@@ -2,7 +2,7 @@ import {Component, OnInit} from "@angular/core";
 import {ReactiveService} from "./services/reactive.service";
 
 @Component({
-  selector: 'my-app',
+  selector: 'Angular SSE',
   template: `<h1>Hello {{name}}</h1>`,
   providers: [ReactiveService]
 })
