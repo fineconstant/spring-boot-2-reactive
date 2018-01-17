@@ -7,7 +7,7 @@
     1. Run `isp.example.service.ReactiveServiceApplication` - A Service application 
     2. Run `isp.example.client.ReactiveClientApplication` - A Spring backend client application
     3. In order to start reactive front-end Angular application (requires node and npm):
-        * Run `cd reactive-fron`
+        * Run `cd reactive-front`
         * Run `npm install`
         * Run `npm start`
     4. **Observe logs of all the applications!**
