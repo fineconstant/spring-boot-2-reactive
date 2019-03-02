@@ -1,5 +1,8 @@
 ## Reactive programming demo
 
+
+Profiled with [![jprofiler](https://www.ej-technologies.com/images/product_banners/jprofiler_medium.png)](https://www.ej-technologies.com/products/jprofiler/overview.html) [Java profiler](https://www.ej-technologies.com/images/product_banners/jprofiler_medium.png).
+
 * #### How to run?
     For the best experience import with IntelliJ.
     
